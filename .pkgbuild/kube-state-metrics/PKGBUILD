@@ -13,7 +13,7 @@ source=()
 _goversion=1.0.0
 
 build() {
-    ls
+    ls -l $startdir/bin
     mkdir $startdir/bin
     go build -o $startdir/bin/${pkgname} main.go
     ls -l $startdir/bin
