@@ -16,7 +16,7 @@ build() {
     pwd
     ls -l $startdir/
     mkdir $startdir/bin
-    go build -o $startdir/bin/${pkgname} main.go
+    go build -o $startdir/bin/${pkgname} ../../main.go
     ls -l $startdir/bin
 }
 
