@@ -278,8 +278,8 @@ func buildMetricsServer(m *metricshandler.MetricsHandler, durationObserver prome
 	mux.Handle("/debug/pprof/symbol", http.HandlerFunc(pprof.Symbol))
 	mux.Handle("/debug/pprof/trace", http.HandlerFunc(pprof.Trace))
 
-	mux.Handle(metricsPath, InstrumentHandlerDuration(durationObserver, m))
-
+	# mux.Handle(metricsPath, InstrumentHandlerDuration(durationObserver, m))
+	mux.Handle(metricsPath, promhttp.InstrumentHandlerDuration(durationObserver, m))
 	// Add healthzPath
 	mux.HandleFunc(healthzPath, func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
