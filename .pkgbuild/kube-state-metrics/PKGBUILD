@@ -1,4 +1,4 @@
-pkgname=kube_state_metrics_exporter
+pkgname=kube-state-metrics
 pkgver=VERSION  # placeholder
 pkgver() {
     # 工具名: 打包-基础包
