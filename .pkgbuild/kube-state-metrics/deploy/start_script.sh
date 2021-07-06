@@ -29,7 +29,7 @@ fi
 
 
 # 启动命令
-start_cmd="./bin/kube-state-metrics-exporter --listen=0.0.0.0:9403 >/dev/null 2>log/${app_folder}.log &"
+start_cmd="./bin/kube-state-metrics-exporter --port=port1 --telemetry-port=port2 --kubeconfig=/root/.kube/config --apiserver=http://ip:port >/dev/null 2>log/${app_folder}.log &"
 
 
 # 日志目录

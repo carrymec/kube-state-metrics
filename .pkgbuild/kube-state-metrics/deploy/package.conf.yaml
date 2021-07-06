@@ -5,7 +5,7 @@ service_list:
 dependencies: ~
 start_dependencies: []
 proc_list:
-  - proc_name: kube_state_metrics_exporter
+  - proc_name: kube-state-metrics-exporter
     proc_num_min: ~
     proc_num_max: ~
     pid_file: ~
